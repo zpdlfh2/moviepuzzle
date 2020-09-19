@@ -14,7 +14,7 @@ int main() {
 	auto scene = Scene::create("STAGE 1", "images/blank.png");
 	auto scene2 = Scene::create("STAGE 2", "images/blank.png");
 	auto sound = Sound::create("audio/bgm.mp3");
-	sound->play();
+	sound->play(true);
 	auto part1X = 310, part1Y = 470, distance = 226;
 
 	Puzzle first_puzzle_point[8] = {
