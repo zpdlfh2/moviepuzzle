@@ -11,10 +11,41 @@ public:
 };
 
 int main() {
+	auto firstpage = Scene::create("MOVIE PUZZLE", "images/firstpage.png");
+	auto secondpage = Scene::create("MOVIE PUZZLE", "images/secondpage.png");
+	auto thirdpage = Scene::create("MOVIE PUZZLE", "images/thirdpage.png");
+	auto fourthpage = Scene::create("MOVIE PUZZLE", "images/fourthpage.png");
 	auto scene = Scene::create("STAGE 1", "images/blank.png");
 	auto scene2 = Scene::create("STAGE 2", "images/blank.png");
 	auto sound = Sound::create("audio/bgm.mp3");
 	sound->play(true);
+
+	auto firstPageButton = Object::create("images/next.png", firstpage, 585, 30);
+	firstPageButton->setScale(0.1f);
+	auto secondPageButton = Object::create("images/next.png", secondpage, 585, 30);
+	secondPageButton->setScale(0.1f);
+	auto thirdPageButton = Object::create("images/next.png", thirdpage, 585, 30);
+	thirdPageButton->setScale(0.1f);
+	auto fourthPageButton = Object::create("images/next.png", fourthpage, 585, 30);
+	fourthPageButton->setScale(0.1f);
+
+	firstPageButton->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
+		secondpage->enter();
+		return true;
+		});
+	secondPageButton->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
+		thirdpage->enter();
+		return true;
+		});
+	thirdPageButton->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
+		fourthpage->enter();
+		return true;
+		});
+	fourthPageButton->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
+		scene->enter();
+		return true;
+		});
+
 	auto part1X = 310, part1Y = 470, distance = 226;
 
 	Puzzle first_puzzle_point[8] = {
@@ -66,16 +97,16 @@ int main() {
 	}
 
 	int mix[10][8] = {
-		{9, 6, 5, 8, 3, 7, 4, 1 },
-		{6, 9, 8, 3, 1, 4, 2, 7 },
-		{6, 1, 4, 8, 7, 9, 3, 2 },
-		{5, 7, 9, 1, 3, 8, 6, 2},
-		{7, 3, 8, 9, 4, 2, 1, 5},
-		{4, 7, 9, 2, 6, 8, 5, 3 },
-		{5, 8, 2, 6, 3, 9, 1, 4},
-		{2, 6, 7, 8, 4, 1, 9, 5 },
-		{2, 7, 1, 9, 6, 3, 5, 4 },
-		{2, 1, 8, 3, 6, 5, 7, 4 },
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
 	};
 
 	auto startButton = Object::create("images/start.png", scene, 50, 450);
@@ -2541,16 +2572,16 @@ int main() {
 	}
 
 	int mix2[10][8] = {
-		{9, 6, 5, 8, 3, 7, 4, 1 },
-		{6, 9, 8, 3, 1, 4, 2, 7 },
-		{6, 1, 4, 8, 7, 9, 3, 2 },
-		{5, 7, 9, 1, 3, 8, 6, 2},
-		{7, 3, 8, 9, 4, 2, 1, 5},
-		{4, 7, 9, 2, 6, 8, 5, 3 },
-		{5, 8, 2, 6, 3, 9, 1, 4},
-		{2, 6, 7, 8, 4, 1, 9, 5 },
-		{2, 7, 1, 9, 6, 3, 5, 4 },
-		{2, 1, 8, 3, 6, 5, 7, 4 },
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
 	};
 
 	auto startButton2 = Object::create("images/start.png", scene2, 50, 450);
@@ -4952,22 +4983,22 @@ int main() {
 
 			switch (level) {
 			case 8:
-				showMessage("미션 성공!! 당신은 <그랜드마스터> 입니다!");
+				showMessage("미션 성공!! 당신의 레벨은 <그랜드마스터> 입니다!");
 				break;
 			case 7:
-				showMessage("미션 성공!! 당신은 <마스터> 입니다!");
+				showMessage("미션 성공!! 당신의 레벨은 <마스터> 입니다!");
 				break;
 			case 6:
-				showMessage("미션 성공!! 당신은 <다이아> 입니다!");
+				showMessage("미션 성공!! 당신의 레벨은 <다이아> 입니다!");
 				break;
 			case 5:
-				showMessage("미션 성공!! 당신은 <플래티넘> 입니다!");
+				showMessage("미션 성공!! 당신의 레벨은 <플래티넘> 입니다!");
 				break;
 			case 4:
-				showMessage("미션 성공!! 당신은 <골드> 입니다!");
+				showMessage("미션 성공!! 당신의 레벨은 <골드> 입니다!");
 				break;
 			case 3:
-				showMessage("미션 성공!! 당신은 <실버> 입니다!");
+				showMessage("미션 성공!! 당신의 레벨은 <실버> 입니다!");
 				break;
 			default:
 				showMessage("미션 성공!! 당신은 <브론즈> 입니다!");
@@ -4988,7 +5019,7 @@ int main() {
 	setGameOption(GameOption::GAME_OPTION_MESSAGE_BOX_BUTTON, false);
 
 
-	startGame(scene);
+	startGame(firstpage);
 
 
 	return 0;
