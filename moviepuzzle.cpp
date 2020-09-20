@@ -97,16 +97,16 @@ int main() {
 	}
 
 	int mix[10][8] = {
-		{9, 6, 5, 8, 3, 7, 4, 1 },
-		{6, 9, 8, 3, 1, 4, 2, 7 },
-		{6, 1, 4, 8, 7, 9, 3, 2 },
-		{5, 7, 9, 1, 3, 8, 6, 2},
-		{7, 3, 8, 9, 4, 2, 1, 5},
-		{4, 7, 9, 2, 6, 8, 5, 3 },
-		{5, 8, 2, 6, 3, 9, 1, 4},
-		{2, 6, 7, 8, 4, 1, 9, 5 },
-		{2, 7, 1, 9, 6, 3, 5, 4 },
-		{2, 1, 8, 3, 6, 5, 7, 4 },
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
 	};
 
 	auto startButton = Object::create("images/start.png", scene, 50, 450);
@@ -161,7 +161,7 @@ int main() {
 
 
 
-	//puzzle 1
+	//1번 조각
 
 	puzzles[0]->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
 		if ((arrX[0] - 10 < part1X) && (arrY[0] - 10 < part1Y - distance * 2)) {
@@ -451,7 +451,7 @@ int main() {
 		});
 
 
-	//puzzle 2
+	//2번 조각
 
 	puzzles[1]->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
 		if ((arrX[1] - 10 < part1X) && (arrY[1] - 10 < part1Y - distance * 2)) {
@@ -741,7 +741,7 @@ int main() {
 		});
 
 
-	//puzzle 3
+	//3번 조각
 
 	puzzles[2]->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
 		if ((arrX[2] - 10 < part1X) && (arrY[2] - 10 < part1Y - distance * 2)) {
@@ -1031,7 +1031,7 @@ int main() {
 		});
 
 
-	//puzzle 4
+	//4번 조각
 
 	puzzles[3]->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
 		if ((arrX[3] - 10 < part1X) && (arrY[3] - 10 < part1Y - distance * 2)) {
@@ -1321,7 +1321,7 @@ int main() {
 		});
 
 
-	//puzzle 5
+	//5번 조각
 
 	puzzles[4]->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
 		if ((arrX[4] - 10 < part1X) && (arrY[4] - 10 < part1Y - distance * 2)) {
@@ -1611,7 +1611,7 @@ int main() {
 		});
 
 
-	//puzzle 6
+	//6번 조각
 
 	puzzles[5]->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
 		if ((arrX[5] - 10 < part1X) && (arrY[5] - 10 < part1Y - distance * 2)) {
@@ -1901,7 +1901,7 @@ int main() {
 		});
 
 
-	//puzzle 7
+	//7번 조각
 
 	puzzles[6]->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
 		if ((arrX[6] - 10 < part1X) && (arrY[6] - 10 < part1Y - distance * 2)) {
@@ -2191,7 +2191,7 @@ int main() {
 		});
 
 
-	//puzzle 8
+	//8번 조각
 
 	puzzles[7]->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
 		if ((arrX[7] - 10 < part1X) && (arrY[7] - 10 < part1Y - distance * 2)) {
@@ -2572,16 +2572,16 @@ int main() {
 	}
 
 	int mix2[10][8] = {
-		{9, 6, 5, 8, 3, 7, 4, 1 },
-		{6, 9, 8, 3, 1, 4, 2, 7 },
-		{6, 1, 4, 8, 7, 9, 3, 2 },
-		{5, 7, 9, 1, 3, 8, 6, 2},
-		{7, 3, 8, 9, 4, 2, 1, 5},
-		{4, 7, 9, 2, 6, 8, 5, 3 },
-		{5, 8, 2, 6, 3, 9, 1, 4},
-		{2, 6, 7, 8, 4, 1, 9, 5 },
-		{2, 7, 1, 9, 6, 3, 5, 4 },
-		{2, 1, 8, 3, 6, 5, 7, 4 },
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
+		{2, 3, 6, 1, 8, 9, 4, 7},
 	};
 
 	auto startButton2 = Object::create("images/start.png", scene2, 50, 450);
@@ -2639,7 +2639,7 @@ int main() {
 
 
 
-	//puzzle 1
+	//1번 조각
 
 	puzzle2[0]->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
 		if ((arr2X[0] - 10 < part2X) && (arr2Y[0] - 10 < part2Y - distance * 2)) {
@@ -2929,7 +2929,7 @@ int main() {
 		});
 
 
-	//puzzle 2
+	//2번 조각
 
 	puzzle2[1]->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
 		if ((arr2X[1] - 10 < part2X) && (arr2Y[1] - 10 < part2Y - distance * 2)) {
@@ -3219,7 +3219,7 @@ int main() {
 		});
 
 
-	//puzzle 3
+	//3번 조각
 
 	puzzle2[2]->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
 		if ((arr2X[2] - 10 < part2X) && (arr2Y[2] - 10 < part2Y - distance * 2)) {
@@ -3509,7 +3509,7 @@ int main() {
 		});
 
 
-	//puzzle 4
+	//4번 조각
 
 	puzzle2[3]->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
 		if ((arr2X[3] - 10 < part2X) && (arr2Y[3] - 10 < part2Y - distance * 2)) {
@@ -3799,7 +3799,7 @@ int main() {
 		});
 
 
-	//puzzle 5
+	//5번 조각
 
 	puzzle2[4]->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
 		if ((arr2X[4] - 10 < part2X) && (arr2Y[4] - 10 < part2Y - distance * 2)) {
@@ -4089,7 +4089,7 @@ int main() {
 		});
 
 
-	//puzzle 6
+	//6번 조각
 
 	puzzle2[5]->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
 		if ((arr2X[5] - 10 < part2X) && (arr2Y[5] - 10 < part2Y - distance * 2)) {
@@ -4379,7 +4379,7 @@ int main() {
 		});
 
 
-	//puzzle 7
+	//7번 조각
 
 	puzzle2[6]->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
 		if ((arr2X[6] - 10 < part2X) && (arr2Y[6] - 10 < part2Y - distance * 2)) {
@@ -4669,7 +4669,7 @@ int main() {
 		});
 
 
-	//puzzle 8
+	//8번 조각
 
 	puzzle2[7]->setOnMouseCallback([&](ObjectPtr object, int x, int y, MouseAction action)->bool {
 		if ((arr2X[7] - 10 < part2X) && (arr2Y[7] - 10 < part2Y - distance * 2)) {
